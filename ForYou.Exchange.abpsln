@@ -1,0 +1,59 @@
+{
+  "folders": {
+    "items": {
+      "apps": {},
+      "gateways": {},
+      "services": {}
+    }
+  },
+  "modules": {
+    "ForYou.Exchange": {
+      "path": "ForYou.Exchange.abpmdl"
+    },
+    "ForYou.Exchange.AuthServer": {
+      "path": "apps/auth-server/ForYou.Exchange.AuthServer.abpmdl",
+      "folder": "apps"
+    },
+    "ForYou.Exchange.Blazor": {
+      "path": "apps/blazor/ForYou.Exchange.Blazor.abpmdl",
+      "folder": "apps"
+    },
+    "ForYou.Exchange.PublicWeb": {
+      "path": "apps/public-web/ForYou.Exchange.PublicWeb.abpmdl",
+      "folder": "apps"
+    },
+    "ForYou.Exchange.Web": {
+      "path": "apps/web/ForYou.Exchange.Web.abpmdl",
+      "folder": "apps"
+    },
+    "ForYou.Exchange.WebGateway": {
+      "path": "gateways/web/ForYou.Exchange.WebGateway.abpmdl",
+      "folder": "gateways"
+    },
+    "ForYou.Exchange.PublicWebGateway": {
+      "path": "gateways/web-public/ForYou.Exchange.PublicWebGateway.abpmdl",
+      "folder": "gateways"
+    },
+    "ForYou.Exchange.AdministrationService": {
+      "path": "services/administration/ForYou.Exchange.AdministrationService.abpmdl",
+      "folder": "services"
+    },
+    "ForYou.Exchange.IdentityService": {
+      "path": "services/identity/ForYou.Exchange.IdentityService.abpmdl",
+      "folder": "services"
+    },
+    "ForYou.Exchange.ProductService": {
+      "path": "services/product/ForYou.Exchange.ProductService.abpmdl",
+      "folder": "services"
+    },
+    "ForYou.Exchange.SaasService": {
+      "path": "services/saas/ForYou.Exchange.SaasService.abpmdl",
+      "folder": "services"
+    }
+  },
+  "runProfiles": {
+    "Default": {
+      "path": "etc/run-profiles/Default.abprun.json"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>ForYou.Exchange.ProductService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>        
+        <ProjectReference Include="..\..\..\..\shared\ForYou.Exchange.Shared.Hosting.Microservices\ForYou.Exchange.Shared.Hosting.Microservices.csproj" />
+        <ProjectReference Include="..\ForYou.Exchange.ProductService.Application\ForYou.Exchange.ProductService.Application.csproj" />
+        <ProjectReference Include="..\ForYou.Exchange.ProductService.EntityFrameworkCore\ForYou.Exchange.ProductService.EntityFrameworkCore.csproj" />
+        <ProjectReference Include="..\ForYou.Exchange.ProductService.HttpApi\ForYou.Exchange.ProductService.HttpApi.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Logs\**" />
+        <Content Remove="Logs\**" />
+        <EmbeddedResource Remove="Logs\**" />
+        <None Remove="Logs\**" />
+    </ItemGroup>
+
+</Project>

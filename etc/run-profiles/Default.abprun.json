@@ -1,0 +1,54 @@
+{
+  "applications": {
+    "Docker-Dependencies": {
+      "type": "cli",
+      "workingDirectory": "../docker",
+      "startCommand": "./up.ps1",
+      "stopCommand": "./down.ps1"
+    },
+    "ForYou.Exchange.AuthServer": {
+      "type": "dotnet-project",
+      "path": "../../apps/auth-server/src/ForYou.Exchange.AuthServer/ForYou.Exchange.AuthServer.csproj"
+    },
+    "ForYou.Exchange.Blazor": {
+      "type": "dotnet-project",
+      "path": "../../apps/blazor/src/ForYou.Exchange.Blazor/ForYou.Exchange.Blazor.csproj"
+    },
+    "ForYou.Exchange.Blazor.Server": {
+      "type": "dotnet-project",
+      "path": "../../apps/blazor/src/ForYou.Exchange.Blazor.Server/ForYou.Exchange.Blazor.Server.csproj"
+    },
+    "ForYou.Exchange.PublicWeb": {
+      "type": "dotnet-project",
+      "path": "../../apps/public-web/src/ForYou.Exchange.PublicWeb/ForYou.Exchange.PublicWeb.csproj"
+    },
+    "ForYou.Exchange.Web": {
+      "type": "dotnet-project",
+      "path": "../../apps/web/src/ForYou.Exchange.Web/ForYou.Exchange.Web.csproj"
+    },
+    "ForYou.Exchange.AdministrationService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/administration/src/ForYou.Exchange.AdministrationService.HttpApi.Host/ForYou.Exchange.AdministrationService.HttpApi.Host.csproj"
+    },
+    "ForYou.Exchange.IdentityService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/identity/src/ForYou.Exchange.IdentityService.HttpApi.Host/ForYou.Exchange.IdentityService.HttpApi.Host.csproj"
+    },
+    "ForYou.Exchange.ProductService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/product/src/ForYou.Exchange.ProductService.HttpApi.Host/ForYou.Exchange.ProductService.HttpApi.Host.csproj"
+    },
+    "ForYou.Exchange.SaasService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "../../services/saas/src/ForYou.Exchange.SaasService.HttpApi.Host/ForYou.Exchange.SaasService.HttpApi.Host.csproj"
+    },
+    "ForYou.Exchange.WebGateway": {
+      "type": "dotnet-project",
+      "path": "../../gateways/web/src/ForYou.Exchange.WebGateway/ForYou.Exchange.WebGateway.csproj"
+    },
+    "ForYou.Exchange.PublicWebGateway": {
+      "type": "dotnet-project",
+      "path": "../../gateways/web-public/src/ForYou.Exchange.PublicWebGateway/ForYou.Exchange.PublicWebGateway.csproj"
+    }
+  }
+}

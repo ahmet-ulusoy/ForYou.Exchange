@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\..\..\common.props" />
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <RootNamespace>ForYou.Exchange.AdministrationService</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="8.0.1" />
+        <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="8.0.1" />
+        <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="8.0.1" />
+        <PackageReference Include="Volo.Abp.AuditLogging.Application" Version="8.0.1" />
+        <PackageReference Include="Volo.Abp.LanguageManagement.Application" Version="8.0.1" />
+        <PackageReference Include="Volo.Abp.TextTemplateManagement.Application" Version="8.0.1" />
+        <PackageReference Include="Volo.Abp.Gdpr.Application" Version="8.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ForYou.Exchange.AdministrationService.Application.Contracts\ForYou.Exchange.AdministrationService.Application.Contracts.csproj" />
+        <ProjectReference Include="..\ForYou.Exchange.AdministrationService.Domain\ForYou.Exchange.AdministrationService.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

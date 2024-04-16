@@ -1,0 +1,13 @@
+{
+  "folders": {
+    "items": {
+      "src": {}
+    }
+  },
+  "packages": {
+    "ForYou.Exchange.AuthServer": {
+      "path": "src/ForYou.Exchange.AuthServer/ForYou.Exchange.AuthServer.abppkg",
+      "folder": "src"
+    }
+  }
+}

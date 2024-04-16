@@ -1,0 +1,21 @@
+config:
+  selfUrl: # https://angular.exchange.dev
+  gatewayUrl: # https://gateway-web.exchange.dev
+  authServer:
+      authority: # https://authserver.exchange.dev
+      requireHttpsMetadata: # false
+      responseType: "code"
+      strictDiscoveryDocumentValidation: false
+      skipIssuerCheck: true
+  AbpLicenseCode: #
+
+ingress:
+  host: # angular.exchange.dev
+  tlsSecret: exchange-tls
+
+image:
+  repository: foryou/exchange-app-angular
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}

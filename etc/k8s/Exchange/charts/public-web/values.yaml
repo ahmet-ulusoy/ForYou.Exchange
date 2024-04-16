@@ -1,0 +1,25 @@
+config:
+  selfUrl: # 
+  gatewayUrl: # 
+  authServer:
+    authority: # http://exchange-st-authserver
+    requireHttpsMetadata: # "false"
+    isOnK8s: # "true"
+    metaAddress: # http://exchange-st-authserver
+  dotnetEnv: # 
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+  AbpLicenseCode: #
+
+ingress:
+  host: # exchange-st-public-web
+  tlsSecret: exchange-tls
+
+image:
+  repository: foryou/exchange-app-public-web
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}

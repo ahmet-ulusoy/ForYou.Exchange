@@ -1,0 +1,35 @@
+config:
+  selfUrl: # https://gateway-public.exchange.dev
+  corsOrigins: # https://exchange-st-gateway-web,https://exchange-st-gateway-public-web
+  authServer:
+    authority: # http://exchange-st-authserver
+    requireHttpsMetadata: # "false"
+    metadataAddress: # https://authserver.exchange.dev/.well-known/openid-configuration
+    swaggerClientId: # WebGateway_Swagger
+  dotnetEnv: Staging 
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  AbpLicenseCode: #
+
+reRoutes:
+  accountService:
+    url: http://exchange-st-authserver
+  saasService:
+    url: http://saas-st-administration
+  administrationService:
+    url: http://exchange-st-administration
+  productService:
+    url: http://exchange-st-product
+
+ingress:
+  host: gateway-public.exchange.dev
+  tlsSecret: exchange-tls
+
+image:
+  repository: foryou/exchange-gateway-web-public
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}
+    

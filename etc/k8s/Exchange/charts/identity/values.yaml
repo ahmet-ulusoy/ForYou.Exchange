@@ -1,0 +1,47 @@
+config:
+  selfUrl: # https://identity.exchange.dev
+  corsOrigins: # https://exchange-st-gateway-web,https://exchange-st-gateway-public-web
+  connectionStrings:
+    identityService: #
+    administrationService: #
+    saasService: #
+  authServer:
+    authority: # http://exchange-st-authserver
+    requireHttpsMetadata: # "false"
+    metadataAddress: # https://authserver.exchange.dev/.well-known/openid-configuration
+    swaggerClientId: WebGateway_Swagger
+  dotnetEnv: Staging
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+  AbpLicenseCode: #
+
+# Seeded applications and resources 
+openIdDict:
+  applications:
+    authServerRootUrl: #
+    angularRootUrl: #
+    webRootUrl: #
+    blazorRootUrl: #
+    blazorServerRootUrl: #
+    publicWebRootUrl: #
+    webGatewayRootUrl: #
+    publicWebGatewayRootUrl: #
+  resources:  
+    accountServiceRootUrl: #
+    administrationServiceRootUrl: #
+    identityServiceRootUrl: #
+    saasServiceRootUrl: #
+    productServiceRootUrl: #
+
+ingress:
+  host: identity.exchange.dev
+  tlsSecret: exchange-tls
+
+image:
+  repository: foryou/exchange-service-identity
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}

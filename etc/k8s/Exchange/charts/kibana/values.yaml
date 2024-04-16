@@ -1,0 +1,6 @@
+config:
+  elasticsearchUrl: http://exchange-st-elasticsearch:9200
+
+ingress:
+  host: kibana-exchange.dev
+  tlsSecret: exchange-tls

@@ -1,0 +1,62 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "ForYou.Exchange.ProductService.Domain.Shared": {
+      "path": "src/ForYou.Exchange.ProductService.Domain.Shared/ForYou.Exchange.ProductService.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.ProductService.Domain": {
+      "path": "src/ForYou.Exchange.ProductService.Domain/ForYou.Exchange.ProductService.Domain.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.ProductService.Application.Contracts": {
+      "path": "src/ForYou.Exchange.ProductService.Application.Contracts/ForYou.Exchange.ProductService.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.ProductService.Application": {
+      "path": "src/ForYou.Exchange.ProductService.Application/ForYou.Exchange.ProductService.Application.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.ProductService.EntityFrameworkCore": {
+      "path": "src/ForYou.Exchange.ProductService.EntityFrameworkCore/ForYou.Exchange.ProductService.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.ProductService.HttpApi": {
+      "path": "src/ForYou.Exchange.ProductService.HttpApi/ForYou.Exchange.ProductService.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.ProductService.HttpApi.Client": {
+      "path": "src/ForYou.Exchange.ProductService.HttpApi.Client/ForYou.Exchange.ProductService.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.ProductService.HttpApi.Host": {
+      "path": "src/ForYou.Exchange.ProductService.HttpApi.Host/ForYou.Exchange.ProductService.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.ProductService.Web": {
+      "path": "src/ForYou.Exchange.ProductService.Web/ForYou.Exchange.ProductService.Web.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.ProductService.Application.Tests": {
+      "path": "test/ForYou.Exchange.ProductService.Application.Tests/ForYou.Exchange.ProductService.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.ProductService.Domain.Tests": {
+      "path": "test/ForYou.Exchange.ProductService.Domain.Tests/ForYou.Exchange.ProductService.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.ProductService.EntityFrameworkCore.Tests": {
+      "path": "test/ForYou.Exchange.ProductService.EntityFrameworkCore.Tests/ForYou.Exchange.ProductService.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.ProductService.TestBase": {
+      "path": "test/ForYou.Exchange.ProductService.TestBase/ForYou.Exchange.ProductService.TestBase.abppkg",
+      "folder": "test"
+    }
+  }
+}

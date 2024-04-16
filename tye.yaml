@@ -1,0 +1,74 @@
+name: Exchange
+services:
+- name: auth-server
+  project: apps/auth-server/src/ForYou.Exchange.AuthServer/ForYou.Exchange.AuthServer.csproj
+  bindings:
+    - protocol: https
+      port: 44322
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=dde9efc3-fab9-4049-a27a-433fc4feadef
+- name: administration-service
+  project: services/administration/src/ForYou.Exchange.AdministrationService.HttpApi.Host/ForYou.Exchange.AdministrationService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44367
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=dde9efc3-fab9-4049-a27a-433fc4feadef
+- name: identity-service
+  project: services/identity/src/ForYou.Exchange.IdentityService.HttpApi.Host/ForYou.Exchange.IdentityService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44388
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=dde9efc3-fab9-4049-a27a-433fc4feadef
+- name: saas-service
+  project: services/saas/src/ForYou.Exchange.SaasService.HttpApi.Host/ForYou.Exchange.SaasService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44381
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=dde9efc3-fab9-4049-a27a-433fc4feadef
+- name: product-service
+  project: services/product/src/ForYou.Exchange.ProductService.HttpApi.Host/ForYou.Exchange.ProductService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 44361
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=dde9efc3-fab9-4049-a27a-433fc4feadef
+- name: web-gateway
+  project: gateways/web/src/ForYou.Exchange.WebGateway/ForYou.Exchange.WebGateway.csproj
+  bindings:
+    - protocol: https
+      port: 44325
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=dde9efc3-fab9-4049-a27a-433fc4feadef  
+- name: web-public-gateway
+  project: gateways/web-public/src/ForYou.Exchange.PublicWebGateway/ForYou.Exchange.PublicWebGateway.csproj
+  bindings:
+    - protocol: https
+      port: 44353
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=dde9efc3-fab9-4049-a27a-433fc4feadef
+- name: web
+  project: apps/web/src/ForYou.Exchange.Web/ForYou.Exchange.Web.csproj
+  bindings:
+    - protocol: https
+      port: 44321
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=dde9efc3-fab9-4049-a27a-433fc4feadef
+- name: public-web
+  project: apps/public-web/src/ForYou.Exchange.PublicWeb/ForYou.Exchange.PublicWeb.csproj
+  bindings:
+    - protocol: https
+      port: 44335
+  env:
+    - Kestrel__Certificates__Default__Path=../../../../etc/dev-cert/localhost.pfx
+    - Kestrel__Certificates__Default__Password=dde9efc3-fab9-4049-a27a-433fc4feadef

@@ -1,0 +1,25 @@
+config:
+  selfUrl: # https://blazor-server.exchange.dev
+  gatewayUrl: # http://exchange-st-gateway-web
+  authServer:
+    authority: # http://exchange-st-authserver
+    requireHttpsMetadata: # "false"
+    isOnK8s: # "true"
+    metaAddress: # http://exchange-st-authserver
+  dotnetEnv: # 
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+  AbpLicenseCode: #
+
+ingress:
+  host: # blazor-server.exchange.dev
+  tlsSecret: exchange-tls
+
+image:
+  repository: foryou/exchange-app-blazor-server
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}   

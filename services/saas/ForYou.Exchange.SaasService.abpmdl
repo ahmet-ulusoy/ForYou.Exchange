@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "ForYou.Exchange.SaasService.HttpApi": {
+      "path": "src/ForYou.Exchange.SaasService.HttpApi/ForYou.Exchange.SaasService.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.SaasService.Application.Contracts": {
+      "path": "src/ForYou.Exchange.SaasService.Application.Contracts/ForYou.Exchange.SaasService.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.SaasService.Application": {
+      "path": "src/ForYou.Exchange.SaasService.Application/ForYou.Exchange.SaasService.Application.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.SaasService.Domain.Shared": {
+      "path": "src/ForYou.Exchange.SaasService.Domain.Shared/ForYou.Exchange.SaasService.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.SaasService.Domain": {
+      "path": "src/ForYou.Exchange.SaasService.Domain/ForYou.Exchange.SaasService.Domain.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.SaasService.EntityFrameworkCore": {
+      "path": "src/ForYou.Exchange.SaasService.EntityFrameworkCore/ForYou.Exchange.SaasService.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.SaasService.HttpApi.Client": {
+      "path": "src/ForYou.Exchange.SaasService.HttpApi.Client/ForYou.Exchange.SaasService.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.SaasService.HttpApi.Host": {
+      "path": "src/ForYou.Exchange.SaasService.HttpApi.Host/ForYou.Exchange.SaasService.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.SaasService.TestBase": {
+      "path": "test/ForYou.Exchange.SaasService.TestBase/ForYou.Exchange.SaasService.TestBase.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.SaasService.Domain.Tests": {
+      "path": "test/ForYou.Exchange.SaasService.Domain.Tests/ForYou.Exchange.SaasService.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.SaasService.EntityFrameworkCore.Tests": {
+      "path": "test/ForYou.Exchange.SaasService.EntityFrameworkCore.Tests/ForYou.Exchange.SaasService.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.MicroserviceName.Application.Tests": {
+      "path": "test/ForYou.Exchange.SaasService.Application.Tests/ForYou.Exchange.SaasService.Application.Tests.abppkg",
+      "folder": "test"
+    }
+  }
+}

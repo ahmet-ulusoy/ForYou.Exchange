@@ -1,0 +1,13 @@
+{
+  "folders": {
+    "items": {
+      "src": {}
+    }
+  },
+  "packages": {
+    "ForYou.Exchange.PublicWebGateway": {
+      "path": "src/ForYou.Exchange.PublicWebGateway/ForYou.Exchange.PublicWebGateway.abppkg",
+      "folder": "src"
+    }
+  }
+}

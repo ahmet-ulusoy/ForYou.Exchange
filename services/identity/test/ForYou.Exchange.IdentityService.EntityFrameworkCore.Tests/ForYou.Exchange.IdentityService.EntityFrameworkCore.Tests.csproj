@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>ForYou.Exchange.IdentityService</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.0" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="8.0.1" />
+    <ProjectReference Include="..\ForYou.Exchange.IdentityService.TestBase\ForYou.Exchange.IdentityService.TestBase.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\ForYou.Exchange.IdentityService.EntityFrameworkCore\ForYou.Exchange.IdentityService.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>

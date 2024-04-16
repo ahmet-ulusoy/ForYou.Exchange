@@ -1,0 +1,32 @@
+ARG BASE_IMAGE=base
+
+FROM ${BASE_IMAGE} AS base
+
+WORKDIR /app
+
+WORKDIR /app/volo/abp/templates/ms/apps/auth-server/src/ForYou.Exchange.AuthServer
+
+RUN --mount=type=cache,id=nuget,target=/root/.nuget/packages \
+    dotnet publish \
+    --no-restore \
+    -c Release -o bin/Release/publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS publish
+WORKDIR /app
+EXPOSE 80
+ENV ASPNETCORE_URLS=http://+:80
+COPY --from=base /app/volo/abp/templates/ms/apps/auth-server/src/ForYou.Exchange.AuthServer/bin/Release/publish .
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+COPY --from=publish /app .
+COPY --from=base /app/volo/abp/templates/ms/NuGet.Config .
+RUN dotnet dev-certs https -v -ep openiddict.pfx -p ec484c89-c42a-4e57-a0ea-17c1e3276e85
+
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+COPY --from=build /src .
+
+ENTRYPOINT ["dotnet", "ForYou.Exchange.AuthServer.dll"]
+

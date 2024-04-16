@@ -1,0 +1,31 @@
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS builder
+WORKDIR /src
+
+COPY "ForYou.Exchange.sln" "ForYou.Exchange.sln"
+
+# Applications
+COPY "apps/auth-server/src/ForYou.Exchange.AuthServer/ForYou.Exchange.AuthServer.csproj" "apps/auth-server/src/ForYou.Exchange.AuthServer/ForYou.Exchange.AuthServer.csproj"
+COPY "apps/public-web/src/ForYou.Exchange.PublicWeb/ForYou.Exchange.PublicWeb.csproj" "apps/public-web/src/ForYou.Exchange.PublicWeb/ForYou.Exchange.PublicWeb.csproj"
+COPY "apps/web/src/ForYou.Exchange.Web/ForYou.Exchange.Web.csproj" "apps/web/src/ForYou.Exchange.Web/ForYou.Exchange.Web.csproj"
+# Shared Projects
+COPY "shared/ForYou.Exchange.DbMigrator/ForYou.Exchange.DbMigrator.csproj" "shared/ForYou.Exchange.DbMigrator/ForYou.Exchange.DbMigrator.csproj"
+COPY "shared/ForYou.Exchange.Shared.Hosting/ForYou.Exchange.Shared.Hosting.csproj" "shared/ForYou.Exchange.Shared.Hosting/ForYou.Exchange.Shared.Hosting.csproj"
+COPY "shared/ForYou.Exchange.Shared.Hosting.Gateways/ForYou.Exchange.Shared.Hosting.Gateways.csproj" "shared/ForYou.Exchange.Shared.Hosting.Gateways/ForYou.Exchange.Shared.Hosting.Gateways.csproj"
+COPY "shared/ForYou.Exchange.Shared.Hosting.Microservices/ForYou.Exchange.Shared.Hosting.Microservices.csproj" "shared/ForYou.Exchange.Shared.Hosting.Microservices/ForYou.Exchange.Shared.Hosting.Microservices.csproj"
+COPY "shared/ForYou.Exchange.Shared.Hosting.AspNetCore/ForYou.Exchange.Shared.Hosting.AspNetCore.csproj" "shared/ForYou.Exchange.Shared.Hosting.AspNetCore/ForYou.Exchange.Shared.Hosting.AspNetCore.csproj"
+COPY "shared/ForYou.Exchange.Shared.Hosting/ForYou.Exchange.Shared.Hosting.csproj" "shared/ForYou.Exchange.Shared.Hosting/ForYou.Exchange.Shared.Hosting.csproj"
+COPY "shared/ForYou.Exchange.Shared.Localization/ForYou.Exchange.Shared.Localization.csproj" "shared/ForYou.Exchange.Shared.Localization/ForYou.Exchange.Shared.Localization.csproj"
+
+# Microservices
+COPY "services/administration/src/ForYou.Exchange.AdministrationService.HttpApi.Host/ForYou.Exchange.AdministrationService.HttpApi.Host.csproj" "services/administration/src/ForYou.Exchange.AdministrationService.HttpApi.Host/ForYou.Exchange.AdministrationService.HttpApi.Host.csproj"
+COPY "services/identity/src/ForYou.Exchange.IdentityService.HttpApi.Host/ForYou.Exchange.IdentityService.HttpApi.Host.csproj" "services/identity/src/ForYou.Exchange.IdentityService.HttpApi.Host/ForYou.Exchange.IdentityService.HttpApi.Host.csproj"
+COPY "services/saas/src/ForYou.Exchange.SaasService.HttpApi.Host/ForYou.Exchange.SaasService.HttpApi.Host.csproj" "services/saas/src/ForYou.Exchange.SaasService.HttpApi.Host/ForYou.Exchange.SaasService.HttpApi.Host.csproj"
+COPY "services/product/src/ForYou.Exchange.ProductService.HttpApi.Host/ForYou.Exchange.ProductService.HttpApi.Host.csproj" "services/product/src/ForYou.Exchange.ProductService.HttpApi.Host/ForYou.Exchange.ProductService.HttpApi.Host.csproj"
+# Gateways
+COPY "gateways/web/src/ForYou.Exchange.WebGateway/ForYou.Exchange.WebGateway.csproj" "gateways/web/src/ForYou.Exchange.WebGateway/ForYou.Exchange.WebGateway.csproj"
+COPY "gateways/web-public/src/ForYou.Exchange.PublicWebGateway/ForYou.Exchange.PublicWebGateway.csproj" "gateways/web-public/src/ForYou.Exchange.PublicWebGateway/ForYou.Exchange.PublicWebGateway.csproj"
+
+COPY "NuGet.Config" "NuGet.Config"
+
+RUN dotnet restore "ForYou.Exchange.sln"

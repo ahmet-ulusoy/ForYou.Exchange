@@ -1,0 +1,33 @@
+config:
+  selfUrl: # https://authserver.exchange.dev
+  corsOrigins: #
+  allowedRedirectUrls: #
+  disablePii: #
+  identityService:
+    connString: # 
+  administrationService:
+    connString: # 
+  saasService:
+    connString: #     
+  authServer:
+    authority: #
+    requireHttpsMetadata: #
+    swaggerClientId: #
+  dotnetEnv: # 
+  redisHost: #
+  rabbitmqHost: #
+  elasticsearchUrl: #
+  stringEncryptionDefaultPassPhrase: gsKnGZ041HLL4IM8
+  AbpLicenseCode: #
+
+ingress:
+  host: authserver.exchange.dev
+  tlsSecret: exchange-tls
+
+image:
+  repository: foryou/exchange-app-authserver
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}
+    

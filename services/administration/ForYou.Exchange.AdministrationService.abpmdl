@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "ForYou.Exchange.AdministrationService.HttpApi": {
+      "path": "src/ForYou.Exchange.AdministrationService.HttpApi/ForYou.Exchange.AdministrationService.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.AdministrationService.Application.Contracts": {
+      "path": "src/ForYou.Exchange.AdministrationService.Application.Contracts/ForYou.Exchange.AdministrationService.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.AdministrationService.Application": {
+      "path": "src/ForYou.Exchange.AdministrationService.Application/ForYou.Exchange.AdministrationService.Application.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.AdministrationService.Domain.Shared": {
+      "path": "src/ForYou.Exchange.AdministrationService.Domain.Shared/ForYou.Exchange.AdministrationService.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.AdministrationService.Domain": {
+      "path": "src/ForYou.Exchange.AdministrationService.Domain/ForYou.Exchange.AdministrationService.Domain.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.AdministrationService.EntityFrameworkCore": {
+      "path": "src/ForYou.Exchange.AdministrationService.EntityFrameworkCore/ForYou.Exchange.AdministrationService.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.AdministrationService.HttpApi.Client": {
+      "path": "src/ForYou.Exchange.AdministrationService.HttpApi.Client/ForYou.Exchange.AdministrationService.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.AdministrationService.HttpApi.Host": {
+      "path": "src/ForYou.Exchange.AdministrationService.HttpApi.Host/ForYou.Exchange.AdministrationService.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.AdministrationService.TestBase": {
+      "path": "test/ForYou.Exchange.AdministrationService.TestBase/ForYou.Exchange.AdministrationService.TestBase.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.AdministrationService.Domain.Tests": {
+      "path": "test/ForYou.Exchange.AdministrationService.Domain.Tests/ForYou.Exchange.AdministrationService.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.AdministrationService.EntityFrameworkCore.Tests": {
+      "path": "test/ForYou.Exchange.AdministrationService.EntityFrameworkCore.Tests/ForYou.Exchange.AdministrationService.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.AdministrationService.Application.Tests": {
+      "path": "test/ForYou.Exchange.AdministrationService.Application.Tests/ForYou.Exchange.AdministrationService.Application.Tests.abppkg",
+      "folder": "test"
+    }
+  }
+}

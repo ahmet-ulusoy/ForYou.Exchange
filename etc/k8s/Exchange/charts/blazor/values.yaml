@@ -1,0 +1,18 @@
+config:
+  selfUrl: # https://blazor.exchange.dev
+  gatewayUrl: # https://gateway-web.exchange.dev
+  authServer:
+      authority: # https://exchange-st-authserver
+      responseType: "code"
+  AbpLicenseCode: #
+
+ingress:
+  host: # blazor.exchange.dev
+  tlsSecret: exchange-tls
+
+image:
+  repository: foryou/exchange-app-blazor
+  tag: latest
+  pullPolicy: IfNotPresent
+
+env: {}

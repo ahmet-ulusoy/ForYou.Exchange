@@ -1,0 +1,58 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "ForYou.Exchange.IdentityService.HttpApi": {
+      "path": "src/ForYou.Exchange.IdentityService.HttpApi/ForYou.Exchange.IdentityService.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.IdentityService.Application": {
+      "path": "src/ForYou.Exchange.IdentityService.Application/ForYou.Exchange.IdentityService.Application.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.IdentityService.Domain": {
+      "path": "src/ForYou.Exchange.IdentityService.Domain/ForYou.Exchange.IdentityService.Domain.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.IdentityService.Domain.Shared": {
+      "path": "src/ForYou.Exchange.IdentityService.Domain.Shared/ForYou.Exchange.IdentityService.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.IdentityService.EntityFrameworkCore": {
+      "path": "src/ForYou.Exchange.IdentityService.EntityFrameworkCore/ForYou.Exchange.IdentityService.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.IdentityService.HttpApi.Client": {
+      "path": "src/ForYou.Exchange.IdentityService.HttpApi.Client/ForYou.Exchange.IdentityService.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.IdentityService.Application.Contracts": {
+      "path": "src/ForYou.Exchange.IdentityService.Application.Contracts/ForYou.Exchange.IdentityService.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.IdentityService.HttpApi.Host": {
+      "path": "src/ForYou.Exchange.IdentityService.HttpApi.Host/ForYou.Exchange.IdentityService.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "ForYou.Exchange.IdentityService.TestBase": {
+      "path": "test/ForYou.Exchange.IdentityService.TestBase/ForYou.Exchange.IdentityService.TestBase.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.IdentityService.Domain.Tests": {
+      "path": "test/ForYou.Exchange.IdentityService.Domain.Tests/ForYou.Exchange.IdentityService.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.IdentityService.EntityFrameworkCore.Tests": {
+      "path": "test/ForYou.Exchange.IdentityService.EntityFrameworkCore.Tests/ForYou.Exchange.IdentityService.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "ForYou.Exchange.IdentityService.Application.Tests": {
+      "path": "test/ForYou.Exchange.IdentityService.Application.Tests/ForYou.Exchange.IdentityService.Application.Tests.abppkg",
+      "folder": "test"
+    }
+  }
+}

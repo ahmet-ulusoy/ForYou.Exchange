@@ -1,0 +1,169 @@
+{
+  "folders": {
+    "src": {},
+    "test": {}
+  },
+  "packages": {
+    "ForYou.Exchange.ProductService.Domain.Shared": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.Domain.Shared/ForYou.Exchange.ProductService.Domain.Shared.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.domain.shared": {}
+      }      
+    },
+    "ForYou.Exchange.ProductService.Domain": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.Domain/ForYou.Exchange.ProductService.Domain.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.domain": {}
+      },
+      "contents": {
+        "aggregates": {
+          "ForYou.Exchange.ProductService.Products.Product": {
+            "keyType": "Guid",
+            "summary": "Represents a product.",
+            "collectionProperties": {},
+            "navigationProperties": {}
+          } 
+        },
+        "repositoryInterfaces": {
+          "ForYou.Exchange.ProductService.Products.IProductRepository": {
+            "entity": {
+              "type": "ForYou.Exchange.ProductService.Products.Product",
+              "package": "ForYou.Exchange.ProductService.Domain"
+            }
+          }
+        }
+      }
+    },
+    "ForYou.Exchange.ProductService.Application.Contracts": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.Application.Contracts/ForYou.Exchange.ProductService.Application.Contracts.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.application.contracts": {}
+      }
+    },
+    "ForYou.Exchange.ProductService.Application": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.Application/ForYou.Exchange.ProductService.Application.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.application": {}
+      },
+      "contents": {
+        "applicationServices": {
+          "ForYou.Exchange.ProductService.ProductAppService": {}
+        }
+      }
+    },
+    "ForYou.Exchange.ProductService.EntityFrameworkCore": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.EntityFrameworkCore/ForYou.Exchange.ProductService.EntityFrameworkCore.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.ef": {}
+      },
+      "contents": {
+        "efDbContexts": {
+          "ForYou.Exchange.ProductService.EntityFrameworkCore.ProductServiceDbContext": {
+            "entities": {
+              "ForYou.Exchange.ProductService.Products.Product": {
+                "package": "ForYou.Exchange.ProductService.Domain",
+                "dbSetPropertyOnDbContext": "Products",
+                "databaseTable": "Products" 
+              }
+            }
+          }
+        }
+      }
+    },
+    "ForYou.Exchange.ProductService.HttpApi": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.HttpApi/ForYou.Exchange.ProductService.HttpApi.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.http-api": {}
+      },
+      "contents": {
+        "controllers": {
+          "ForYou.Exchange.ProductService.Products.ProductController": {},
+          "ForYou.Exchange.ProductService.Products.ProductPublicController": {}
+        }
+      }
+    },
+    "ForYou.Exchange.ProductService.HttpApi.Client": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.HttpApi.Client/ForYou.Exchange.ProductService.HttpApi.Client.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.http-api-client": {}
+      }
+    },
+    "ForYou.Exchange.ProductService.Web": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.Web/ForYou.Exchange.ProductService.Web.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.ui.mvc": {}
+      },
+      "contents": {
+        "mvcPages": {
+          "ForYou.Exchange.ProductService.Web.Pages.Products.Index.cshtml": {},
+          "ForYou.Exchange.ProductService.Web.Pages.Products.CreateModal.cshtml": {},
+          "ForYou.Exchange.ProductService.Web.Pages.Products.EditModal.cshtml": {}
+        }
+      }
+    },
+    "ForYou.Exchange.ProductService.Blazor": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.Blazor/ForYou.Exchange.ProductService.Blazor.csproj",
+      "folder": "src",
+      "includes": {
+        "lib.ui.blazor": {}
+      }
+    },
+    "ForYou.Exchange.ProductService.HttpApi.Host": {
+      "type": "dotnet-project",
+      "path": "src/ForYou.Exchange.ProductService.HttpApi.Host/ForYou.Exchange.ProductService.HttpApi.Host.csproj",
+      "folder": "src",
+      "includes": {
+        "host.http-api": {}
+      }
+    },
+    "ForYou.Exchange.ProductService.TestBase": {
+      "type": "dotnet-project",
+      "path": "test/ForYou.Exchange.ProductService.TestBase/ForYou.Exchange.ProductService.TestBase.csproj",
+      "folder": "test",
+      "includes": {
+        "lib.test": {}
+      }
+    },
+    "ForYou.Exchange.ProductService.Domain.Tests": {
+      "type": "dotnet-project",
+      "path": "test/ForYou.Exchange.ProductService.Domain.Tests/ForYou.Exchange.ProductService.Domain.Tests.csproj",
+      "folder": "test",
+      "includes": {
+        "lib.test": {}
+      }
+    },
+    "ForYou.Exchange.ProductService.EntityFrameworkCore.Tests": {
+      "type": "dotnet-project",
+      "path": "test/ForYou.Exchange.ProductService.EntityFrameworkCore.Tests/ForYou.Exchange.ProductService.EntityFrameworkCore.Tests.csproj",
+      "folder": "test",
+      "includes": {
+        "lib.test": {}
+      }
+    },
+    "ForYou.Exchange.ProductService.Application.Tests": {
+      "type": "dotnet-project",
+      "path": "test/ForYou.Exchange.ProductService.Application.Tests/ForYou.Exchange.ProductService.Application.Tests.csproj",
+      "folder": "test",
+      "includes": {
+        "lib.test": {}
+      }
+    }
+  }
+}
