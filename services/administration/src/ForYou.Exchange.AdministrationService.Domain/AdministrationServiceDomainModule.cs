@@ -1,4 +1,4 @@
-﻿using Volo.Abp.AuditLogging;
+using Volo.Abp.AuditLogging;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Gdpr;
 using Volo.Abp.LanguageManagement;
@@ -9,6 +9,7 @@ using Volo.Abp.PermissionManagement.Identity;
 using Volo.Abp.PermissionManagement.OpenIddict;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TextTemplateManagement;
+using Volo.Chat;
 
 namespace ForYou.Exchange.AdministrationService;
 
@@ -24,7 +25,8 @@ namespace ForYou.Exchange.AdministrationService;
     typeof(AbpPermissionManagementDomainOpenIddictModule),
     typeof(AbpPermissionManagementDomainIdentityModule)
 )]
-public class AdministrationServiceDomainModule : AbpModule
+[DependsOn(typeof(ChatDomainModule))]
+    public class AdministrationServiceDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

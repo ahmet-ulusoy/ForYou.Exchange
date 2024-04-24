@@ -34,6 +34,8 @@
         <ProjectReference Include="..\..\..\..\services\identity\src\ForYou.Exchange.IdentityService.Web\ForYou.Exchange.IdentityService.Web.csproj" />
         <ProjectReference Include="..\..\..\..\services\saas\src\ForYou.Exchange.SaasService.HttpApi.Client\ForYou.Exchange.SaasService.HttpApi.Client.csproj" />
         <ProjectReference Include="..\..\..\..\services\saas\src\ForYou.Exchange.SaasService.Web\ForYou.Exchange.SaasService.Web.csproj" />
+		<PackageReference Include="Volo.Chat.Web" Version="8.0.1" />
+		<PackageReference Include="Volo.Chat.SignalR" Version="8.0.1" />
     </ItemGroup>
 
     <ItemGroup>

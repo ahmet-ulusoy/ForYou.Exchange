@@ -23,6 +23,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TextTemplateManagement;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.Security.Claims;
+using Volo.Chat;
 
 namespace ForYou.Exchange.AdministrationService;
 
@@ -37,7 +38,8 @@ namespace ForYou.Exchange.AdministrationService;
     typeof(AdministrationServiceApplicationModule),
     typeof(AdministrationServiceEntityFrameworkCoreModule),
     typeof(AdministrationServiceHttpApiModule),
-    typeof(AbpOpenIddictProDomainSharedModule)
+    typeof(AbpOpenIddictProDomainSharedModule),
+    typeof(ChatSignalRModule)
 )]
 public class AdministrationServiceHttpApiHostModule : AbpModule
 {

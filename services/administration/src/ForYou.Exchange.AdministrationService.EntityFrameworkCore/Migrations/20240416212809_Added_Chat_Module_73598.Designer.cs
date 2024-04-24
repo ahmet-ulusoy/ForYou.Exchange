@@ -4,6 +4,7 @@ using ForYou.Exchange.AdministrationService.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 
@@ -12,9 +13,11 @@ using Volo.Abp.EntityFrameworkCore;
 namespace ForYou.Exchange.AdministrationService.Migrations
 {
     [DbContext(typeof(AdministrationServiceDbContext))]
-    partial class AdministrationServiceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240416212809_Added_Chat_Module_73598")]
+    partial class Added_Chat_Module_73598
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

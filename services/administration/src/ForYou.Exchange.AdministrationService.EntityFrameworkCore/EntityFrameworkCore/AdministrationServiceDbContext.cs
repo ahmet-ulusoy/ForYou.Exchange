@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
@@ -18,6 +18,10 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TextTemplateManagement.EntityFrameworkCore;
 using Volo.Abp.TextTemplateManagement.TextTemplates;
+using Volo.Chat.EntityFrameworkCore;
+using Volo.Chat.Messages;
+using Volo.Chat.Users;
+using Volo.Chat.Conversations;
 
 namespace ForYou.Exchange.AdministrationService.EntityFrameworkCore;
 
@@ -30,7 +34,8 @@ public class AdministrationServiceDbContext : AbpDbContext<AdministrationService
     ILanguageManagementDbContext,
     ITextTemplateManagementDbContext,
     IGdprDbContext,
-    IBlobStoringDbContext
+    IBlobStoringDbContext,
+    IChatDbContext
 {
     public DbSet<PermissionGrant> PermissionGrants { get; set; }
     public DbSet<PermissionGroupDefinitionRecord> PermissionGroups { get; set; }
@@ -51,6 +56,11 @@ public class AdministrationServiceDbContext : AbpDbContext<AdministrationService
     public DbSet<GdprRequest> Requests { get; set; }
     public DbSet<DatabaseBlobContainer> BlobContainers { get; set; }
     public DbSet<DatabaseBlob> Blobs { get; set; }
+
+    public DbSet<Message> ChatMessages { get; set; }
+    public DbSet<ChatUser> ChatUsers { get; set; }
+    public DbSet<UserMessage> ChatUserMessages { get; set; }
+    public DbSet<Conversation> ChatConversations { get; set; }
 
     public AdministrationServiceDbContext(DbContextOptions<AdministrationServiceDbContext> options)
         : base(options)
@@ -75,5 +85,6 @@ public class AdministrationServiceDbContext : AbpDbContext<AdministrationService
         builder.ConfigureTextTemplateManagement();
         builder.ConfigureGdpr();
         builder.ConfigureBlobStoring();
+        builder.ConfigureChat();
     }
 }

@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
@@ -8,6 +8,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TextTemplateManagement;
+using Volo.Chat;
 
 namespace ForYou.Exchange.AdministrationService;
 
@@ -22,7 +23,8 @@ namespace ForYou.Exchange.AdministrationService;
     typeof(AdministrationServiceApplicationContractsModule),
     typeof(AdministrationServiceDomainModule)
 )]
-public class AdministrationServiceApplicationModule : AbpModule
+[DependsOn(typeof(ChatApplicationModule))]
+    public class AdministrationServiceApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Gdpr;
@@ -7,6 +7,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TextTemplateManagement;
+using Volo.Chat;
 
 namespace ForYou.Exchange.AdministrationService;
 
@@ -20,7 +21,8 @@ namespace ForYou.Exchange.AdministrationService;
     typeof(TextTemplateManagementHttpApiClientModule),
     typeof(AbpGdprHttpApiClientModule)
 )]
-public class AdministrationServiceHttpApiClientModule : AbpModule
+[DependsOn(typeof(ChatHttpApiClientModule))]
+    public class AdministrationServiceHttpApiClientModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

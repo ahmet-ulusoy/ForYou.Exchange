@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Account.Admin.Web;
 using Volo.Abp.Account.Pro.Public.Web.Shared;
 using Volo.Abp.AuditLogging.Web;
@@ -20,7 +20,7 @@ namespace ForYou.Exchange.AdministrationService.Web;
     typeof(AbpAccountPublicWebSharedModule),
     typeof(AdministrationServiceApplicationContractsModule)
     )]
-public class AdministrationServiceWebModule : AbpModule
+    public class AdministrationServiceWebModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

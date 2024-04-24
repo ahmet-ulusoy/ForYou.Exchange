@@ -1,4 +1,4 @@
-﻿using Volo.Abp.AuditLogging;
+using Volo.Abp.AuditLogging;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Gdpr;
 using Volo.Abp.LanguageManagement;
@@ -6,6 +6,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TextTemplateManagement;
+using Volo.Chat;
 
 namespace ForYou.Exchange.AdministrationService;
 
@@ -19,6 +20,7 @@ namespace ForYou.Exchange.AdministrationService;
     typeof(AbpGdprApplicationContractsModule),
     typeof(AdministrationServiceDomainSharedModule)
 )]
-public class AdministrationServiceApplicationContractsModule : AbpModule
+[DependsOn(typeof(ChatApplicationContractsModule))]
+    public class AdministrationServiceApplicationContractsModule : AbpModule
 {
 }

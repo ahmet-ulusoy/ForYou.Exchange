@@ -48,6 +48,8 @@ using Volo.Abp.Security.Claims;
 using Volo.Abp.UI.Navigation;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Chat.Web;
+using Volo.Chat;
 
 namespace ForYou.Exchange.Web;
 
@@ -70,7 +72,9 @@ namespace ForYou.Exchange.Web;
     typeof(AdministrationServiceWebModule),
     typeof(AdministrationServiceHttpApiClientModule),
     typeof(ExchangeSharedHostingAspNetCoreModule),
-    typeof(ExchangeSharedLocalizationModule)
+    typeof(ExchangeSharedLocalizationModule),
+    typeof(ChatWebModule),
+    typeof(ChatSignalRModule)
 )]
 public class ExchangeWebModule : AbpModule
 {

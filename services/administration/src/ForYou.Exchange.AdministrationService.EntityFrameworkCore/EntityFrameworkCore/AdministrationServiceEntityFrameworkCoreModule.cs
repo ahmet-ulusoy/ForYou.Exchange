@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BlobStoring.Database.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore;
@@ -10,6 +10,7 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TextTemplateManagement.EntityFrameworkCore;
+using Volo.Chat.EntityFrameworkCore;
 
 namespace ForYou.Exchange.AdministrationService.EntityFrameworkCore;
 
@@ -25,7 +26,8 @@ namespace ForYou.Exchange.AdministrationService.EntityFrameworkCore;
     typeof(TextTemplateManagementEntityFrameworkCoreModule),
     typeof(AbpGdprEntityFrameworkCoreModule)
 )]
-public class AdministrationServiceEntityFrameworkCoreModule : AbpModule
+[DependsOn(typeof(ChatEntityFrameworkCoreModule))]
+    public class AdministrationServiceEntityFrameworkCoreModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
@@ -44,8 +46,9 @@ public class AdministrationServiceEntityFrameworkCoreModule : AbpModule
             options.ReplaceDbContext<ITextTemplateManagementDbContext>();
             options.ReplaceDbContext<IGdprDbContext>();
             options.ReplaceDbContext<IBlobStoringDbContext>();
+            options.ReplaceDbContext<IChatDbContext>();
 
-                /* includeAllEntities: true allows to use IRepository<TEntity, TKey> also for non aggregate root entities */
+            /* includeAllEntities: true allows to use IRepository<TEntity, TKey> also for non aggregate root entities */
             options.AddDefaultRepositories(includeAllEntities: true);
         });
 

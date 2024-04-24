@@ -36,6 +36,8 @@ using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonX;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonX.Bundling;
 using Volo.Abp.LeptonX.Shared;
 using Volo.Abp.Security.Claims;
+using Volo.Chat.Web;
+using Volo.Chat;
 
 namespace ForYou.Exchange.PublicWeb;
 
@@ -50,7 +52,9 @@ namespace ForYou.Exchange.PublicWeb;
     typeof(AbpAccountPublicHttpApiClientModule),
     typeof(ExchangeSharedHostingAspNetCoreModule),
     typeof(ExchangeSharedLocalizationModule),
-    typeof(ProductServiceHttpApiClientModule)
+    typeof(ProductServiceHttpApiClientModule),
+    typeof(ChatWebModule),
+    typeof(ChatSignalRModule)
     )]
 public class ExchangePublicWebModule : AbpModule
 {

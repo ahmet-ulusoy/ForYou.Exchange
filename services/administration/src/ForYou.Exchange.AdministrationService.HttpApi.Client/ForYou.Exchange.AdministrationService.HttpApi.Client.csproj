@@ -16,6 +16,7 @@
         <PackageReference Include="Volo.Abp.LanguageManagement.HttpApi.Client" Version="8.0.1" />
         <PackageReference Include="Volo.Abp.TextTemplateManagement.HttpApi.Client" Version="8.0.1" />
         <PackageReference Include="Volo.Abp.Gdpr.HttpApi.Client" Version="8.0.1" />
+        <PackageReference Include="Volo.Chat.HttpApi.Client" Version="8.0.1" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\ForYou.Exchange.AdministrationService.Application.Contracts\ForYou.Exchange.AdministrationService.Application.Contracts.csproj" />

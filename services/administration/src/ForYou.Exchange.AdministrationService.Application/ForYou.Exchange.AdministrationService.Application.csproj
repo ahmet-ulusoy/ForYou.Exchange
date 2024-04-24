@@ -16,6 +16,7 @@
         <PackageReference Include="Volo.Abp.LanguageManagement.Application" Version="8.0.1" />
         <PackageReference Include="Volo.Abp.TextTemplateManagement.Application" Version="8.0.1" />
         <PackageReference Include="Volo.Abp.Gdpr.Application" Version="8.0.1" />
+        <PackageReference Include="Volo.Chat.Application" Version="8.0.1" />
     </ItemGroup>
 
     <ItemGroup>

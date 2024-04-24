@@ -3,6 +3,7 @@
   "name": "ExchangePublicWeb",
   "private": true,
   "dependencies": {
-    "@volo/abp.aspnetcore.mvc.ui.theme.lepton": "~8.0.1"
+    "@volo/abp.aspnetcore.mvc.ui.theme.lepton": "~8.0.1",
+    "@volo/chat": "~8.0.1"
   }
 }

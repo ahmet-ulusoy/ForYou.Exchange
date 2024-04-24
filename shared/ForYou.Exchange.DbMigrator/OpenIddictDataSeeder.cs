@@ -263,7 +263,10 @@ public class OpenIddictDataSeeder : ITransientDependency
             secret: "1q2w3e*",
             grantTypes: new List<string> { OpenIddictConstants.GrantTypes.ClientCredentials },
             scopes: commonScopes.Union(new[] { "IdentityService" }).ToList(),
-            permissions: new List<string> { IdentityPermissions.Users.Default }
+            permissions: new List<string> { IdentityPermissions.Users.Default, 
+                IdentityPermissions.UserLookup.Default,
+                "Chat.Messaging",
+                "Chat.Searching" }
         );
     }
 

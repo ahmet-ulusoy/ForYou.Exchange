@@ -55,6 +55,18 @@
           "Path": "/api/gdpr/{**catch-all}"
         }
       },
+      "Chat": {
+        "ClusterId": "Administration",
+        "Match": {
+          "Path": "/api/chat/{**catch-all}"
+        }
+      },
+      "SignalrHubs": {
+        "ClusterId": "Administration",
+        "Match": {
+          "Path": "/signalr-hubs/chat/{**catch-all}"
+        }
+      },
       "AdministrationSwagger": {
         "ClusterId": "Administration",
         "Match": {

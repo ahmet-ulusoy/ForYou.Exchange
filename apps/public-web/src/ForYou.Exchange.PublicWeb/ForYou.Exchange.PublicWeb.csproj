@@ -38,7 +38,10 @@
         <PackageReference Include="Volo.Abp.Account.Pro.Public.HttpApi.Client" Version="8.0.1" />
         <ProjectReference Include="..\..\..\..\shared\ForYou.Exchange.Shared.Hosting.AspNetCore\ForYou.Exchange.Shared.Hosting.AspNetCore.csproj" />
         <ProjectReference Include="..\..\..\..\shared\ForYou.Exchange.Shared.Localization\ForYou.Exchange.Shared.Localization.csproj" />
-        <ProjectReference Include="..\..\..\..\services\product\src\ForYou.Exchange.ProductService.HttpApi.Client\ForYou.Exchange.ProductService.HttpApi.Client.csproj" />
+		<ProjectReference Include="..\..\..\..\services\product\src\ForYou.Exchange.ProductService.HttpApi.Client\ForYou.Exchange.ProductService.HttpApi.Client.csproj" />
+		<ProjectReference Include="..\..\..\..\services\administration\src\ForYou.Exchange.AdministrationService.HttpApi.Client\ForYou.Exchange.AdministrationService.HttpApi.Client.csproj" />
+		<PackageReference Include="Volo.Chat.Web" Version="8.0.1" />
+		<PackageReference Include="Volo.Chat.SignalR" Version="8.0.1" />
     </ItemGroup>
 
     <ItemGroup>

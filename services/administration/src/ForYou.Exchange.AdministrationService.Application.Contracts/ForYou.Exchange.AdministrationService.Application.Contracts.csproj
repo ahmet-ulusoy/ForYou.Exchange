@@ -16,6 +16,7 @@
         <PackageReference Include="Volo.Abp.LanguageManagement.Application.Contracts" Version="8.0.1" />
         <PackageReference Include="Volo.Abp.TextTemplateManagement.Application.Contracts" Version="8.0.1" />
         <PackageReference Include="Volo.Abp.Gdpr.Application.Contracts" Version="8.0.1" />
+        <PackageReference Include="Volo.Chat.Application.Contracts" Version="8.0.1" />
     </ItemGroup>
 
     <ItemGroup>

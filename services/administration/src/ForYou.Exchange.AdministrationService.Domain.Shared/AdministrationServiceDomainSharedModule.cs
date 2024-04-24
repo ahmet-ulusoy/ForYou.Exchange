@@ -1,4 +1,4 @@
-﻿using ForYou.Exchange.AdministrationService.Localization;
+using ForYou.Exchange.AdministrationService.Localization;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Gdpr;
@@ -10,6 +10,7 @@ using Volo.Abp.SettingManagement;
 using Volo.Abp.TextTemplateManagement;
 using Volo.Abp.Validation.Localization;
 using Volo.Abp.VirtualFileSystem;
+using Volo.Chat;
 
 namespace ForYou.Exchange.AdministrationService;
 
@@ -22,7 +23,8 @@ namespace ForYou.Exchange.AdministrationService;
     typeof(TextTemplateManagementDomainSharedModule),
     typeof(AbpGdprDomainSharedModule)
 )]
-public class AdministrationServiceDomainSharedModule : AbpModule
+[DependsOn(typeof(ChatDomainSharedModule))]
+    public class AdministrationServiceDomainSharedModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)
     {
