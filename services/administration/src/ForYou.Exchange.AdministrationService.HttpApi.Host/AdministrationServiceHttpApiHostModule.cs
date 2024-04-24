@@ -38,8 +38,8 @@ namespace ForYou.Exchange.AdministrationService;
     typeof(AdministrationServiceApplicationModule),
     typeof(AdministrationServiceEntityFrameworkCoreModule),
     typeof(AdministrationServiceHttpApiModule),
-    typeof(AbpOpenIddictProDomainSharedModule),
-    typeof(ChatSignalRModule)
+    typeof(AbpOpenIddictProDomainSharedModule)
+    //typeof(ChatSignalRModule)
 )]
 public class AdministrationServiceHttpApiHostModule : AbpModule
 {
