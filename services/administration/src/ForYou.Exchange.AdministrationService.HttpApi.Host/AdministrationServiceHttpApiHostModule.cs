@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -14,6 +15,7 @@ using Prometheus;
 using Volo.Abp;
 using Volo.Abp.Account;
 using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
+using Volo.Abp.EventBus.Distributed;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Http.Client.IdentityModel.Web;
 using Volo.Abp.Identity;
@@ -24,6 +26,7 @@ using Volo.Abp.TextTemplateManagement;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.Security.Claims;
 using Volo.Chat;
+using Volo.Chat.Messages;
 
 namespace ForYou.Exchange.AdministrationService;
 
@@ -38,8 +41,8 @@ namespace ForYou.Exchange.AdministrationService;
     typeof(AdministrationServiceApplicationModule),
     typeof(AdministrationServiceEntityFrameworkCoreModule),
     typeof(AdministrationServiceHttpApiModule),
-    typeof(AbpOpenIddictProDomainSharedModule)
-    //typeof(ChatSignalRModule)
+    typeof(AbpOpenIddictProDomainSharedModule),
+    typeof(ChatSignalRModule)
 )]
 public class AdministrationServiceHttpApiHostModule : AbpModule
 {
@@ -99,6 +102,13 @@ public class AdministrationServiceHttpApiHostModule : AbpModule
         Configure<SettingManagementOptions>(options =>
         {
             options.IsDynamicSettingStoreEnabled = true;
+        });
+
+        context.Services.RemoveAll(x => x.ServiceType == typeof(IRealTimeChatMessageSender));
+        context.Services.AddTransient<IRealTimeChatMessageSender, DistributedEventBusRealTimeChatMessageSender>();
+        context.Services.Configure<AbpDistributedEventBusOptions>(options =>
+        {
+            options.Handlers.RemoveAll(x => x == typeof(ChatMessageDistributedEventHandler));
         });
     }
 

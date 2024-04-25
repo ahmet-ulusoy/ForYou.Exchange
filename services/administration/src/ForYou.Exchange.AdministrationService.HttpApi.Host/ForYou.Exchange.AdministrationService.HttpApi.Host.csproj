@@ -22,7 +22,7 @@
         <PackageReference Include="Volo.Abp.Account.Pro.Admin.Application.Contracts" Version="8.0.1" />
         <PackageReference Include="Volo.Abp.Account.Pro.Public.Application.Contracts" Version="8.0.1" />
         <PackageReference Include="Volo.Abp.OpenIddict.Pro.Domain.Shared" Version="8.0.1" />
-		<!-- <PackageReference Include="Volo.Chat.SignalR" Version="8.0.1" /> -->
+		<PackageReference Include="Volo.Chat.SignalR" Version="8.0.1" />
     </ItemGroup>
 
     <ItemGroup>
